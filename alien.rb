@@ -7,9 +7,9 @@ class Alien
 
   attr_accessor :x, :y
 
-  def initialize
-    @x = 200
-    @y = 200
+  def initialize(args)
+    @x = args.fetch(:x, 200)
+    @y = args.fetch(:y, 200)
   end
 
   def move
@@ -23,10 +23,12 @@ class Alien
     "👾 (#{x}, #{y})"
   end
 
-  def fire(missiles)
-    missile = Missile.new(x, bottom_edge)
-    missile.launch(10)
-    missiles.add(missile)
+  def ordinance_velocity
+    10
+  end
+
+  def muzzle_location
+    Vector.new(x, bottom_edge)
   end
 
   def bottom_edge

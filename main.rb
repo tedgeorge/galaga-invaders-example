@@ -40,10 +40,10 @@ class GalagaInvaders
     elsif key == 'd'
       ship.move_right
     elsif key == ' '
-      ship.fire(missiles)
+      missiles.launch_for(ship)
     end
     if key == 'p'
-      alien.fire(missiles)
+      missles.launch_for(alien)
     end
   end
 
@@ -59,4 +59,11 @@ Reflecting on Principle
    is dependent on it. (For example, one dependency is knowing the other class name.)
 3. What are two primary factors to consider when assessing the risk of a dependency?
 4. What is Metz's rule of thumb for choosing a dependency direction?
+
+1. False, good design eliminates unnecessary dependencies, while using and improving
+   necessary ones
+2. knowing the name of the other class, name of a message it intends to send to
+   something that isn't self, arguments a message requires, order of said arguments
+3. Likelihood of reuirements change and number of dependencies
+4. Make objects depend on objects that are less likely to change
 =end
