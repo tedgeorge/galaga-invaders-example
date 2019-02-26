@@ -26,6 +26,11 @@ class Alien
     location.y + half_height
   end
 
+  def add_missile
+    missile = Missile.new(Vector.new(ship_or_alien.location.x, ship_or_alien.bottom_edge))
+    missile.launch(10)
+  end
+
   private
 
   def half_height

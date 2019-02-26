@@ -61,4 +61,12 @@ Reflecting on Principle
    "duck type" rather than a concrete class?
 3. True or False: Abstractions like duck typing make code explicitly easier to
    understand, vs. using concrete types.
+
+1. Duck typing is when we define objects by their behavior more than their class.
+   It has to do with polymorphism because duck typed objects can respond to the
+   same message.
+2. Case statements that switch on a class, use of kind_of or is_a, or use of
+   responds_to.
+3. False, Abstractions make code harder to understand than with concrete types
+   but make it easier to change.
 =end
